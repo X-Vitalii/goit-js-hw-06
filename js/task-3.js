@@ -7,18 +7,13 @@ class StringBuilder {
     return this.#value;
   }
   padEnd(str) {
-    this.#value = this.#value.padEnd(this.#value.length + str.length, str);
-    // console.log(this.#value.length);
-    // console.log(str.length);
+    this.#value = this.#value.concat(str);
   }
   padStart(str) {
-    this.#value = this.#value.padStart(this.#value.length + str.length, str);
-    // console.log(this.#value.length);
-    // console.log(str.length);
+    this.#value = str.concat(this.#value);
   }
   padBoth(str) {
     this.#value = str.concat(this.#value, str);
-    // this.#value = this.#value.padBoth(this.#value.length + 2 * str.length, str);
   }
 }
 
